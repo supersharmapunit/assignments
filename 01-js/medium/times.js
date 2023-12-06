@@ -9,5 +9,14 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
+    let pre = performance.now();
+    let sum = 0;
+    while(n != 0) {
+        sum += n--;
+    }
+    let post = performance.now();
+    console.log('time elapsed', (post - pre)/1000, ' secs with sum : ', sum);
     return 0.01;
 }
+
+calculateTime(1000000000)
